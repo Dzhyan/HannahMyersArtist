@@ -1,0 +1,130 @@
+/* Universal Styles */
+
+/* sitewide */
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    height: 100%;
+  }
+
+/* HEADER and NAV styles, present on every page */
+header nav ul, body nav ul {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  height: 50px;
+  align-items: center;
+  justify-content: flex-start;
+}
+nav a {
+  padding-right: 3.5rem;
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-family: "libre baskerville", serif;
+  color: #d2a0a0;
+  text-decoration: none;
+}
+
+/* BODY styles, baseline for every page */
+body {
+  height: 100%;
+  background-image: url("../images/OverallBackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+
+/* styles for a few pages in particular */
+
+/* ABOUT page styles */
+.about {
+  display: grid;
+  grid-template-rows: minmax(100px, 500px) minmax(100px, 500px);
+  grid-template-columns: minmax(100px, 500px) minmax(100px, 500px);
+  gap: 1rem;
+  grid-template-areas: "portrait bio" "cv about_deco";
+  border-radius: 5px;
+  justify-content: center;
+  overflow: auto; }
+.aboutcard {
+  background-color: #475c36;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;}
+.aboutcard img.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;}
+.aboutcard.cv {
+  padding-top: 35%;}
+.aboutcard.cv a {
+  color: #d2a0a0;
+  text-decoration: none;
+  font-size: 2rem;}
+
+/* CONTACT page styles */
+.contact {
+  display: grid;
+  grid-template-rows: minmax(100px, 500px);
+  grid-template-columns: minmax(100px, 500px) minmax(100px, 500px);
+  grid-template-areas: "contactphoto contactdetails";
+  justify-content: center;
+  overflow: auto; }
+ .contactcard {
+  background-color: #475c36;
+  padding: 1rem;
+  text-align: center;}
+.contactcard img.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;}
+.contactcard.contactdetails {
+  border-radius: 0px 15px 15px 0px;}
+.contactcard.contactphoto {
+  border-radius: 15px 0px 0px 15px;}
+
+/* WORK page styles */
+.work {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: minmax(100px, 500px) minmax(100px, 500px);
+  justify-content: center;
+  overflow: auto;
+  grid-auto-flow: rows;
+  gap: 1rem;}
+.navwork {
+  grid-column: span 2;}
+.workcard {
+  background-color: #475c36;
+  padding: 1rem;
+  text-align: center;
+  grid-column: span 1;
+  border-radius: 15px;}
+.workcard:hover {
+  grid-column: span 2;}
+.workcard img.photo {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;}
+.workcard:hover img.photo{
+  float: left;
+  width: 50%;
+  height: 90%;
+  object-fit: cover;}
+.workcard p.description {
+  display: none;}
+.workcard:hover p.description {
+  display:block;}
+.rusttextile {grid-area: 1 / 1 / span 1 / span 1;}
+.journey {grid-area: 2 / 1 / span 1 / span 1;}
+.snowdrop {grid-area: 3 / 1 / span 1 / span 1;}
+
+
+
+/* FOOTER styles */
+.footer {
+  text-align: center;
+  color: #97ba8f;
+}
