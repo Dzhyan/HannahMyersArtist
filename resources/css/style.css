@@ -35,6 +35,16 @@ body {
   background-size: cover;
   }
 
+/* FOOTER styles */
+.footer {
+  text-align: center;
+  color: #97ba8f;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+
 
 /* styles for a few pages in particular */
 
@@ -79,52 +89,73 @@ body {
 .contactcard img.photo {
   width: 100%;
   height: 100%;
-  object-fit: cover;}
+  object-fit: cover;
+  border-radius: 15px;}
 .contactcard.contactdetails {
   border-radius: 0px 15px 15px 0px;}
 .contactcard.contactphoto {
   border-radius: 15px 0px 0px 15px;}
 
+
 /* WORK page styles */
+
+/* make the nav section thats active BIGGER */
+
+
 .work {
-  display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: minmax(100px, 500px) minmax(100px, 500px);
-  justify-content: center;
-  overflow: auto;
-  grid-auto-flow: rows;
-  gap: 1rem;}
-.navwork {
-  grid-column: span 2;}
-.workcard {
-  background-color: #475c36;
-  padding: 1rem;
-  text-align: center;
-  grid-column: span 1;
-  border-radius: 15px;}
-.workcard:hover {
-  grid-column: span 2;}
-.workcard img.photo {
-  width: 100%;
-  height: 90%;
-  object-fit: cover;}
-.workcard:hover img.photo{
-  float: left;
-  width: 50%;
-  height: 90%;
-  object-fit: cover;}
-.workcard p.description {
-  display: none;}
-.workcard:hover p.description {
-  display:block;}
-.rusttextile {grid-area: 1 / 1 / span 1 / span 1;}
-.journey {grid-area: 2 / 1 / span 1 / span 1;}
-.snowdrop {grid-area: 3 / 1 / span 1 / span 1;}
-
-
-
-/* FOOTER styles */
-.footer {
-  text-align: center;
-  color: #97ba8f;
+  margin: 3rem;
+  padding: 0 1.5rem;
 }
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  overflow-x: visible;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.portfolio-grid::after {
+  content: '';
+  flex: 0 0 200px;        /* reserve exactly 200px buffer */
+  /* no height needed—just an invisible flex-item */
+}
+
+.workcard {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-color: #475c36;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  transition: width 0.4s ease;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/* Project Image */
+.workcard img.photo {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.workcard .description {
+  display: none;
+  padding: 0rem 1rem;
+  width: 200px;
+  height: 100%;
+  color: #f8ad31;
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
+  overflow-wrap: break-word;
+  align-items: start;
+}
+
+
+
