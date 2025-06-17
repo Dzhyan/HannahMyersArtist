@@ -7,22 +7,25 @@
   <link rel="stylesheet" href="./resources/css/style.css">
   <meta charset="UTF-8">
   <title>Hannah Myers Artist</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
 </head>
 
 
 
 
 <body>
-  <script src="./resources/script.js" async></script>
-
-
   <!-- Header -->
   <header>
     <div class="content">
+      <div class="artistheader">
+        <h1 class="artistheading">Hannah Myers</h1>
+        <h2 class="artistbanner">ARTIST</h2>
+      </div>
+
       <nav class="navdesktop">
         <ul>
           <li><a href="index.html">HOME</a></li>
-          <li><a href="#">ABOUT HANNAH</a></li>
+          <li><a href="about.html">ABOUT</a></li>
           <li><a href="work.html">WORK</a></li>
           <li><a href="blog.html">BLOG</a></li>
           <li><a href="contact.html">CONTACT</a></li>
@@ -31,87 +34,138 @@
     </div>
   </header>
 
-  <!-- a secondary NAV, with a grid under it that changes based on the nav selection
-   (ideally not a whole new page). Note: swapping grids is a javascript thing, for now just 
-   use different pages -->
-    <nav class="navwork">
+  
+
+  <!-- a secondary NAV, with a grid under it -->
+    <div class="navwork">
         <ul>
-            <li><a href="#">ALL</a></li>
+            <li><a href="work.html">ALL</a></li>
             <li><a href="./work/creations.html">CREATIONS</a></li>
-            <li><a href="./work/performing.html">PERFORMING</a></li>
-            <li><a href="./work/collaborative.html">COLLABORATIVE</a></li>
+            <li><a href="./work/performance.html">PERFORMANCE</a></li>
+            <li><a href="./work/collaboration.html">COLLABORATION</a></li>
             <li><a href="./work/videos.html">VIDEOS</a></li>
         </ul>
-    </nav>
+      </div>
     <br>
-    <!-- The grid in separate photos with titles, and upon hoover
-   they expand to show descriptions. Clicking opens the box up to a full sized view, but
-   it does not leave the WORK page. -->
+
     <div class="work">
-      <div class="portfolio-grid">
-        <!-- boxes with work photos -->
-        <div class="workcard creation rusttextile">
-          <img class="photo" src="./resources/images/work.creations/rust1.jpg">
-          <p class="description">I made these rust-inspired textiles out of paper and fabric scraps whilst on the Bridge House Art Portfolio Course in Ullapool. 
-          I was inspired by rusty boats and old doors where the paint starts to peel off.
-          <br><br>
-          <a href="#">..take me there</a>
-          </p>
+      <div class="card-container">
+
+        <div class="workcard">
+          <div class="image">
+            <img src="./resources/images/work.creations/rust1.jpg" alt="Rust textiles">
+          </div>
+          <div class="text">
+            <h3>Rust Textile</h3>
+            <p>I made these rust-inspired textiles out of paper and fabric scraps whilst on the Bridge House Art Portfolio Course in Ullapool. I was inspired by rusty boats and old doors where the paint starts to peel off.</p>
+            <a href="./work/projectpages/rust.html">..take me there</a>
+          </div>
         </div>
-        <div class="workcard creation journey">
-          <img class="photo" src="./resources/images/work.creations/journey1.jpg">
-          <p class="description">In the format of a continuous poem, the book tells the story of Hannah walking barefoot through her forest at home.
-          <br><br><br><br>
-          <a href="#">..take me there</a>
-          </p>
+
+        <div class="workcard">
+          <div class="image">
+            <img src="./resources/images/work.creations/journey1.jpg" alt="Journey book">
+          </div>
+          <div class="text">
+            <h3>Journey - A Celebration of Nature</h3>
+            <p>In the format of a continuous poem, the book tells the story of Hannah walking barefoot through her forest at home.</p>
+            <a href="./work/projectpages/journey.html">..take me there</a>
+          </div>
         </div>
-        <div class="workcard creation snowdrop">
-          <img class="photo" src="./resources/images/work.creations/snowdrop1.jpg">
-          <p class="description">An adaptation of Snow White and the Seven Dwarfs by the Brothers Grimm.
-          <br><br><br><br>
-          <a href="#">..take me there</a>
-          </p>
+
+        <div class="workcard">
+          <div class="image">
+            <img src="./resources/images/work.creations/snowdrop1.jpg" alt="Snowdrop">
+          </div>
+          <div class="text">
+            <h3>Snowdrop and the Seven Nymphs</h3>
+            <p>An adaptation of Snow White and the Seven Dwarfs by the Brothers Grimm.</p>
+            <a href="./work/projectpages/snowdrop.html">..take me there</a>
+          </div>
         </div>
-        <div class="workcard creation flickr">
-          <img class="photo" src="./resources/images/work.creations/flickr.png">
-          <p class="description">My image portfolio where I have a wide range of work.
-          <br><br><br><br>
-          <a href="#">..take me there</a>
-          </p>
+
+        <div class="workcard">
+          <div class="image">
+            <img src="./resources/images/work.creations/flickr.png" alt="Image portfolio">
+          </div>
+          <div class="text">
+            <h3>Flickr Portfolio</h3>
+            <p>My image portfolio where I have a wide range of work. This will direct you to an external site.</p>
+            <a href="./work/projectpages/flickr.html">..take me there</a>
+          </div>
         </div>
-        <div class="workcard creation rusttextile">
-          <img class="photo" src="./resources/images/work.creations/rust1.jpg">
-          <p class="description">I made these rust-inspired textiles out of paper and fabric scraps whilst on the Bridge House Art Portfolio Course in Ullapool. 
-          I was inspired by rusty boats and old doors where the paint starts to peel off.
-          <br><br>
-          <a href="#">..take me there</a>
-          </p>
+
+        <div class="workcard">
+          <div class="image">
+            <img src="./resources/images/work.performance/belladrum.avif" alt="Belladrum">
+          </div>
+          <div class="text">
+            <h3>Tartan Heart Festival, Belladrum</h3>
+            <p>I worked as part of the team at Belladrum to operate multiple life-size puppets.</p>
+            <a href="./work/projectpages/belladrum.html">..take me there</a>
+          </div>
         </div>
-        <div class="workcard creation journey">
-          <img class="photo" src="./resources/images/work.creations/journey1.jpg">
-          <p class="description">In the format of a continuous poem, the book tells the story of Hannah walking barefoot through her forest at home.
-          <br><br><br><br>
-          <a href="#">..take me there</a>
-          </p>
+
+        <div class="workcard">
+          <div class="image">
+            <img src="./resources/images/work.performance/ECACostume.avif" alt="ECA Costume Show">
+          </div>
+          <div class="text">
+            <h3>ECA Costume Show</h3>
+            <p>I performed in the ECA Costume Show 2018 and 2019, as Sister Sage and Pamina. </p>
+            <a href="./work/projectpages/ecacostume.html">..take me there</a>
+          </div>
         </div>
-        <div class="workcard creation snowdrop">
-          <img class="photo" src="./resources/images/work.creations/snowdrop1.jpg">
-          <p class="description">An adaptation of Snow White and the Seven Dwarfs by the Brothers Grimm.
-          <br><br><br><br>
-          <a href="#">..take me there</a>
-          </p>
+
+        <div class="workcard">
+          <div class="image">
+            <img src="./resources/images/work.performance/diapason.avif" alt="Diapason">
+          </div>
+          <div class="text">
+            <h3>Diapason</h3>
+            <p>A project lead by performance artist Alex Rigg, showcasing costumes inspired by poems that Alex had written.</p>
+            <a href="./work/projectpages/diapason.html">..take me there</a>
+          </div>
         </div>
-        <div class="workcard creation flickr">
-          <img class="photo" src="./resources/images/work.creations/flickr.png">
-          <p class="description">My image portfolio where I have a wide range of work.
-          <br><br><br><br>
-          <a href="#">..take me there</a>
-          </p>
+
+        <div class="workcard">
+          <div class="image">
+            <img src="./resources/images/work.collaboration/ecostage.avif" alt="EcoStage">
+          </div>
+          <div class="text">
+            <h3>Ecostage</h3>
+            <p>Formerly known as Ecostage Pledge, launched in 2015, Ecostage is an autonomous online platform to help creative practitioners implement a more ecologically-conscious approach in performance at the making stage.</p>
+            <a href="./work/projectpages/ecostage.html">..take me there</a>
+          </div>
         </div>
+
+        <div class="workcard">
+          <div class="image">
+            <img src="./resources/images/work.collaboration/glimpsing.avif" alt="Glimpsing Air Pockets">
+          </div>
+          <div class="text">
+            <h3>Glimpsing Air Pockets by Christina Liddell</h3>
+            <p>'Glimpsing Air Pockets' is an interactive dance performance that Christina wove together to honour the young people at the Royal Hospital for Sick Children in Edinburgh</p>
+            <a href="./work/projectpages/glimpsing.html">..take me there</a>
+          </div>
+        </div>
+
+        <div class="workcard">
+          <div class="image">
+            <img src="./resources/images/work.collaboration/bewildered.avif" alt="Be-Wildered">
+          </div>
+          <div class="text">
+            <h3>Be-Wildered in the City</h3>
+            <p>'Be-Wildered in the City' was a holistic Edinburgh Fringe Festival event lead by the Schumacher College Scottish alumni.</p>
+            <a href="./work/projectpages/bewildered.html">..take me there</a>
+          </div>
+        </div>
+
+        <!-- Add more cards the same way -->
+
       </div>
     </div>
-    
-    
+
 
 
 

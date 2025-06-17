@@ -2,19 +2,73 @@
 
 /* sitewide */
 html {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    height: 100%;
-  }
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  height: 100%;
+  color: #d2a0a0;
+  background-image: url("../images/OverallBackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  color: #d2a0a0;
+  text-decoration: none;
+}
+
+.artistheader {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.artistheading {
+  text-align: center;
+  font-family: "libre baskerville", serif;
+  color: #d2a0a0;
+  font-size: 3rem;
+  font-weight: 180;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.artistbanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-family: "libre baskerville", serif;
+  color: #d2a0a0;
+  letter-spacing: 0.15rem;
+  gap: 4rem;
+  padding: 0;
+  margin: 0;
+  font-weight: 180;
+  line-height: 1;
+}
+
+.artistbanner::before,
+.artistbanner::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: rgb(231, 49, 49, 0.5);
+}
+
+
 
 /* HEADER and NAV styles, present on every page */
 header nav ul, body nav ul {
   display: flex;
+  width: 100%;
   list-style-type: none;
   text-decoration: none;
   height: 50px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 nav a {
   padding-right: 3.5rem;
@@ -28,25 +82,49 @@ nav a {
 
 /* BODY styles, baseline for every page */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   height: 100%;
-  background-image: url("../images/OverallBackground.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: transparent;
   }
 
 /* FOOTER styles */
 .footer {
+  flex: 0 0 50px;
+  margin-top: auto;
   text-align: center;
   color: #97ba8f;
-  position: fixed;
-  bottom: 0px;
   width: 100%;
 }
 
+h3 {
+  margin: 0;
+  padding: 0;
+}
 
+/* INDEX style */
 
-/* styles for a few pages in particular */
+.index.deco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; /* Adjust as needed */
+  background: #475c36;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 800px;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.index.deco .photo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
 
 /* ABOUT page styles */
 .about {
@@ -97,65 +175,245 @@ body {
   border-radius: 15px 0px 0px 15px;}
 
 
+/* WORKNAV page styles */
+.navwork {
+  text-align: center;
+}
+.navwork ul {
+  display: inline-block;
+  list-style: none;
+  padding: 2rem 0 0 0;
+}
+.navwork li {
+  display: inline;
+  margin: 0rem 1rem;
+}
+.navwork a {
+  display: inline;
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #d2a0a0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+}
+
+
 /* WORK page styles */
-
-/* make the nav section thats active BIGGER */
-
-
-.work {
-  margin: 3rem;
-  padding: 0 1.5rem;
-}
-
-.portfolio-grid {
+.card-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  overflow-x: visible;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.portfolio-grid::after {
-  content: '';
-  flex: 0 0 200px;        /* reserve exactly 200px buffer */
-  /* no height needed—just an invisible flex-item */
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px auto;
 }
 
 .workcard {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  background-color: #475c36;
-  border-radius: 5px;
-  overflow: hidden;
   display: flex;
-  flex-direction: row;
-  transition: width 0.4s ease;
-  padding: 20px;
-  cursor: pointer;
+  background: #475c36;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Project Image */
-.workcard img.photo {
-  width: 200px;
+.image {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
+  display: block;
+  margin: 0;
+  color: white;
 }
 
-.workcard .description {
-  display: none;
-  padding: 0rem 1rem;
-  width: 200px;
-  height: 100%;
+.text a {
+  align-self: flex-end;
+  text-decoration: none;
   color: #f8ad31;
   font-size: 0.9rem;
+  margin: 1rem;
+}
+
+.text {
+  margin: 1rem;
+}
+
+/* BLOG styles ************ */ 
+.blog {
+  display: flex;
+  justify-content: center;  
+  align-items: center;       
+  height: 100vh;             
+  padding: 5rem;
+}
+
+.blogcard {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  background-color: #475c36;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.blogimage {
+  flex: 1;
+  min-width: 300px;
+}
+
+.blogimage .photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blogtext {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  color: white;
+}
+
+.blogtext h2 {
+  margin-top: 0;
+}
+
+.blogtext p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.blogtext .link {
+  align-self: flex-end;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #f8ad31;
+  font-size: 0.9rem;
+}
+
+
+/* VIDEO styles */
+.workcard-video .image,
+.workcard-video .image.unavailable  {
+  width: 600px;
+  height: 330px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.workcard-video .image iframe,
+.workcard-video .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: none;
+}
+
+.workcard-video .image.unavailable .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.workcard-video .image.unavailable .play-button::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-left: 18px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.workdetailcontent {
+  background: #475c36;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.workdetailcontent h1,
+.workdetailcontent p {
+  color: white;
   font-family: 'Roboto', sans-serif;
-  overflow-wrap: break-word;
-  align-items: start;
+}
+
+.workdetailcontent img {
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 4px;
 }
 
 
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
