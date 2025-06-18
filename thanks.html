@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="./resources/css/style.css">
   <meta charset="UTF-8">
-  <title>Hannah Myers Artist</title>
+  <title>Thank You | Hannah Myers</title>
   <link rel="icon" href="favicon.png" type="image/png" />
 </head>
 
@@ -29,35 +29,19 @@
   </header>
 
   <main>
-    <!-- this section uses a grid, its from an older version but its very concise CSS and 
-    prefer it to the extra code required for a flex layout -->
     <div class="contact">
       <div class="contactcard contactphoto" style="grid-area: contactphoto">
         <img class="photo" src="./resources/images/contact.jpg">
       </div>
       <div class="contactcard contactdetails" style="grid-area: contactdetails">
-        <form method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
-          <br><br><h2>GET IN TOUCH</h2><br><br>
-           <!-- Honeypot field to detect bots (do not modify this) -->
-          <div style="display: none;">
-            <label for="bot-field">Don’t fill this out if you're human</label>
-            <input type="text" id="bot-field" name="bot-field" />
-          </div>
-          <label for="name"></label>
-          <input type="text" id="name" name="name" placeholder="Your name" required />
-          <br><br>
-          <label for="email"></label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required />
-          <br><br>
-          <label for="message"></label>
-          <br>
-          <textarea id="message" name="message" rows="10" cols="40" placeholder="Your message..." required></textarea>
-          <br><br><br>
-          <button type="submit">Send Message</button>
-        </form>
+        <br><br><h2>GET IN TOUCH</h2><br><br>
+        <div class="thank-you-message">
+          <h3>Thank you for your message!</h3>
+          <p>Your message has been successfully submitted. I will get back to you as soon as possible.</p>
+          <p>If you need anything else, please don't hesitate to contact me again.</p>
+        </div>
       </div>
     </div>
-
   </main>
 
   <footer class="footer">
@@ -65,3 +49,4 @@
   </footer>
 
 </body>
+</html>
