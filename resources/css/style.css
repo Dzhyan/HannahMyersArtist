@@ -149,7 +149,7 @@ footer {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  max-width: 75vw;
+  max-width: min(75vw, 1000px);
   margin: 0 auto;
 }
 .aboutcard {
