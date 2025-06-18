@@ -11,51 +11,49 @@
 </head>
 
 <body>
-  <!-- Header -->
   <header>
-    <div class="content">
-      <div class="artistheader">
-        <h1 class="artistheading">Hannah Myers</h1>
-        <h2 class="artistbanner">ARTIST</h2>
-      </div>
-
-      <nav class="navdesktop">
-        <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="work.html">WORK</a></li>
-          <li><a href="blog.html">BLOG</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-      </nav>
+    <div class="artistheader">
+      <h1 class="artistheading">Hannah Myers</h1>
+      <h2 class="artistbanner">ARTIST</h2>
     </div>
+
+    <nav class="navdesktop">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <main>
+    <!-- this section uses a grid, its from an older version but its very concise CSS and 
+    prefer it to the extra code required for a flex layout -->
+    <div class="contact">
+      <div class="contactcard contactphoto" style="grid-area: contactphoto">
+        <img class="photo" src="./resources/images/contact.jpg">
+      </div>
+      <div class="contactcard contactdetails" style="grid-area: contactdetails">
+        <form method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
+          <br><br><h2>GET IN TOUCH</h2><br><br>
+          <label for="name"></label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <br><br>
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <br><br>
+          <label for="message"></label>
+          <br>
+          <textarea id="message" name="message" rows="10" cols="40" placeholder="Your message..." required></textarea>
+          <br><br><br>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
 
-  <!-- a grid box, with two boxes inside it, with photos and text -->
-  <div class="contact">
-    <!-- box 1 -->
-    <div class="contactcard contactphoto" style="grid-area: contactphoto">
-      <img class="photo" src="./resources/images/contact.jpg">
-    </div>
-    <!-- box 2 -->
-    <div class="contactcard contactdetails" style="grid-area: contactdetails">
-      <form method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <h2>GET IN TOUCH</h2>
-        <label for="name"></label>
-        <input type="text" id="name" name="name" placeholder="Your name" required />
-        <br><br>
-        <label for="email"></label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required />
-        <br><br>
-        <label for="message"></label>
-        <br>
-        <textarea id="message" name="message" rows="10" cols="40" placeholder="Your message..." required></textarea>
-        <br><br>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </div>
+  </main>
 
   <footer class="footer">
     <h5>© Hannah Myers - Artist</h5>
