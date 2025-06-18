@@ -254,6 +254,7 @@ footer {
 .blogcard {
   display: flex;
   flex-direction: column;
+  max-width: min(75vw, 1000px);
 }
 
 .blog .image,
