@@ -329,6 +329,10 @@ footer {
   border-radius: 4px;
 }
 
+.workdetailcontent ul {
+  list-style: none;
+}
+
 /* ******************************************* VIDEO */
 .workcard-video .image,
 .workcard-video .image.unavailable  {
